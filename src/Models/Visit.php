@@ -1,6 +1,6 @@
 <?php
 
-namespace Yousef\Visits\Models;
+namespace Yousefpackage\Visits\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

@@ -1,13 +1,13 @@
 {
-    "name": "yousef/visits",
+    "name": "yousefpackage/visits",
     "description": "This package is for controlling everything related to website visits using the Laravel framework",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
-    "require": {},
     "autoload": {
         "psr-4": {
-            "Yousef\\Visits\\": "src/"
+            "Yousefpackage\\Visits\\": "src/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "require": {}
 }

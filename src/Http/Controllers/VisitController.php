@@ -1,10 +1,10 @@
 <?php
 
-namespace Yousef\Visits\Http\Controllers;
+namespace Yousefpackage\Visits\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Yousef\Visits\Models\Visit;
+use Yousefpackage\Visits\Models\Visit;
 use Illuminate\Support\Facades\Http;
 
 class VisitController extends Controller

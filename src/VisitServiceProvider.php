@@ -1,6 +1,6 @@
 <?php
 
-namespace Yousef\Visits;
+namespace Yousefpackage\Visits;
 use Illuminate\Support\ServiceProvider;
 
 class VisitServiceProvider extends ServiceProvider{

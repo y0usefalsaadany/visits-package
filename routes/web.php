@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Yousef\Visits\Http\Controllers\VisitController;
+use Yousefpackage\Visits\Http\Controllers\VisitController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
