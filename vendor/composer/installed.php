@@ -6,11 +6,11 @@
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'reference' => NULL,
-        'name' => 'yousef/visits',
+        'name' => 'yousefpackage/visits',
         'dev' => true,
     ),
     'versions' => array(
-        'yousef/visits' => array(
+        'yousefpackage/visits' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'type' => 'library',
