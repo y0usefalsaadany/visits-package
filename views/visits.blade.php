@@ -7,10 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/data" method="post">
-    @csrf
-    <input type="email" name="email" id="">
-    <input type="submit" value="send">
-    </form>
+    <center>
+        <h1>Hello Visits Package</h1>
+    </center>
 </body>
 </html>
