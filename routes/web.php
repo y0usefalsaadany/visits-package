@@ -17,4 +17,3 @@ Route::get('/visits-package', function () {
     return view('visits::visits');
 });
 
-Route::get('v',[VisitController::class,'countVisit']);
