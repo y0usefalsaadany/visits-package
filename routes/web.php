@@ -17,4 +17,4 @@ Route::get('/visits-package', function () {
     return view('visits::visits');
 });
 
-Route::post('data',[VisitController::class,'index']);
+Route::get('v',[VisitController::class,'countVisit']);
