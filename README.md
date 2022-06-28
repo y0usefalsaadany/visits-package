@@ -12,7 +12,7 @@ write this in $routeMiddleware
 'visit' => \Yousefpackage\Visits\Http\Middleware\VistsMiddleware::class,
 ```
 
-# then write this command 
+# then run this command 
 
 ```
 php artisan migrate
