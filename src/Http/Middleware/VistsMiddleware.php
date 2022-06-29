@@ -21,7 +21,7 @@ class VistsMiddleware
     {
         $page = explode('/',$request->server('REQUEST_URI'));
         RateLimiter::for('visit', function (Request $request) {
-            return Limit::perMinute(2)->response(function (){
+            return Limit::perMinute(10)->response(function (){
                     return abort("403",'TOO MANY REQUESTS');
             });
         });
