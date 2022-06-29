@@ -47,12 +47,13 @@ If you want to calculate the number of views you have, make a controller and the
 <?php
 
 use Yousefpackage\Visits\Models\Visit;
+use Illuminate\Support\Facades\DB;
 
 class ViewsController extends Controller
 {
     function index(){
 
-        return Visit::count(); // To count the number of views 
+        return DB::table('visits')->select('ip')->count(); // To count the number of views 
 
         return Visit::all(); // To display the data in the visits table
     }
