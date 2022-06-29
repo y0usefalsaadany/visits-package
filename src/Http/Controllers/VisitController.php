@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Yousefpackage\Visits\Models\Visit;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\DB;
 
 class VisitController extends Controller
 {
@@ -16,7 +17,7 @@ class VisitController extends Controller
         $visitTable->ip = $request->ip();
         $visitTable->city = $data['city'];
         $visitTable->save();
-        $countVisits = count(Visit::all());
+        $countVisits = DB::table('visits')->count();
         return $countVisits;
     }
 }
