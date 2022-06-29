@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->ipAddress('ip');
             $table->string('city')->nullable();
+            $table->string('page');
+            $table->string('os');
             $table->timestamps();
         });
     }

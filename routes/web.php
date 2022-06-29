@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Yousefpackage\Visits\Http\Controllers\VisitController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,5 +14,5 @@ use Yousefpackage\Visits\Http\Controllers\VisitController;
 
 Route::get('/visits-package', function () {
     return view('visits::visits');
-});
+})->middleware('throttle:visit', 'visit');
 

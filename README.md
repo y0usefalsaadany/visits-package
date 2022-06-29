@@ -26,17 +26,39 @@ now for test this package goto your browser and write this visits-package
 http://127.0.0.1:8000/visits-package
 ```
 
-
+# using
 Now Put this middleware on the route you want to calculate the number of views for.
 
 ```
-->middleware('visit');
+->middleware('throttle:visit', 'visit');
 ```
 
-# like this 
+like this 
 
 ```
 Route::get('/', function () {
     return view('welcome');
-})->middleware('visit');
+})->middleware('throttle:visit', 'visit');
 ```
+
+If you want to calculate the number of views you have, make a controller and then put this code
+
+```
+<?php
+
+use Yousefpackage\Visits\Models\Visit;
+
+class ViewsController extends Controller
+{
+    function index(){
+
+        return Visit::count(); // To count the number of views 
+
+        return Visit::all(); // To display the data in the visits table
+    }
+}
+
+>
+```
+
+And we find in the table that we have the visitor’s IP, his city, the page he visited and the type of his operating system
