@@ -14,6 +14,7 @@ write this in $routeMiddleware
 'providers' => [
 
 Yousefpackage\Visits\VisitServiceProvider::class,
+Yousefpackage\Visits\RoutePackageServiceProvider::class,
 
 ],
 ```
