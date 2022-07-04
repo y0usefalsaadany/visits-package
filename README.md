@@ -4,6 +4,20 @@
 composer require yousefpackage/visits
 ```
 
+# then goto config folder 
+
+in app.php
+
+write this in $routeMiddleware
+
+```
+'providers' => [
+
+Yousefpackage\Visits\VisitServiceProvider::class,
+
+],
+```
+
 # then goto kernel.php
 
 write this in $routeMiddleware

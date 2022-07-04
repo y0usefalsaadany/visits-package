@@ -20,12 +20,7 @@ class VistsMiddleware
     public function handle(Request $request, Closure $next)
     {
         $page = explode('/',$request->server('REQUEST_URI'));
-        RateLimiter::for('visit', function (Request $request) {
-            return Limit::perMinute(10)->response(function (){
-                    return abort("403",'TOO MANY REQUESTS');
-            });
-        });
-
+        
         $api = Http::get('http://ipwho.is/'. $request->ip());
         $data = json_decode($api, true);
         $visitTable =  new Visit;
@@ -41,10 +36,10 @@ class VistsMiddleware
 
 
 
-    function getOS() { 
+    function getOS() {
 
         $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    
+
         $os_platform =   "Bilinmeyen İşletim Sistemi";
         $os_array =   array(
             '/windows nt 10/i'      =>  'Windows 10',
@@ -71,12 +66,12 @@ class VistsMiddleware
             '/blackberry/i'         =>  'BlackBerry',
             '/webos/i'              =>  'Mobile'
         );
-    
-        foreach ( $os_array as $regex => $value ) { 
+
+        foreach ( $os_array as $regex => $value ) {
             if ( preg_match($regex, $user_agent ) ) {
                 $os_platform = $value;
             }
-        }   
+        }
         return $os_platform;
     }
 }
